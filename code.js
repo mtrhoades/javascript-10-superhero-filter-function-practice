@@ -1,6 +1,3 @@
-// SELECTORS
-const root = document.querySelector("#root");
-
 // DATA
 let heroes = [
   {
@@ -9,6 +6,7 @@ let heroes = [
     mainColor: "black",
     powers: { superspeed: false, canFly: false, usesMagic: false },
     home: "Gotham",
+    height: { meters: 1.88, inches: 74 },
   },
   {
     name: "Superman",
@@ -16,6 +14,7 @@ let heroes = [
     mainColor: "blue",
     powers: { superspeed: true, canFly: true, usesMagic: false },
     home: "Fortress of Solitude",
+    height: { meters: 1.91, inches: 75 },
   },
   {
     name: "Flash",
@@ -23,6 +22,7 @@ let heroes = [
     mainColor: "red",
     powers: { superspeed: false, canFly: false, usesMagic: false },
     home: "Central City",
+    height: { meters: 1.83, inches: 72 },
   },
   {
     name: "Aquaman",
@@ -30,6 +30,7 @@ let heroes = [
     mainColor: "orange",
     powers: { superspeed: false, canFly: false, usesMagic: false },
     home: "Atlantis",
+    height: { meters: 1.93, inches: 76 },
   },
   {
     name: "Green_Arrow",
@@ -37,6 +38,7 @@ let heroes = [
     mainColor: "green",
     powers: { superspeed: false, canFly: false, usesMagic: false },
     home: "Star City",
+    height: { meters: 1.85, inches: 73 },
   },
   {
     name: "Hawkman",
@@ -44,6 +46,7 @@ let heroes = [
     mainColor: "green",
     powers: { superspeed: false, canFly: true, usesMagic: false },
     home: "Ancient Egypt",
+    height: { meters: 1.85, inches: 73 },
   },
   {
     name: "Robin",
@@ -51,6 +54,7 @@ let heroes = [
     mainColor: "red",
     powers: { superspeed: false, canFly: false, usesMagic: false },
     home: "Gotham",
+    height: { meters: 1.63, inches: 64 },
   },
   {
     name: "Supergirl",
@@ -58,6 +62,7 @@ let heroes = [
     mainColor: "blue",
     powers: { superspeed: false, canFly: false, usesMagic: false },
     home: "Midvale Orphanage",
+    height: { meters: 1.47, inches: 58 },
   },
   {
     name: "Green_Lantern",
@@ -65,6 +70,7 @@ let heroes = [
     mainColor: "green",
     powers: { superspeed: false, canFly: true, usesMagic: false },
     home: "Oa",
+    height: { meters: 1.88, inches: 74 },
   },
   {
     name: "Cyborg",
@@ -72,6 +78,7 @@ let heroes = [
     mainColor: "grey",
     powers: { superspeed: false, canFly: false, usesMagic: false },
     home: "Detroit",
+    height: { meters: 1.73, inches: 68 },
   },
   {
     name: "Shazaam",
@@ -79,6 +86,7 @@ let heroes = [
     mainColor: "red",
     powers: { superspeed: false, canFly: true, usesMagic: true },
     home: "Fewcett City",
+    height: { meters: 1.93, inches: 76 },
   },
   {
     name: "Batgirl",
@@ -86,6 +94,7 @@ let heroes = [
     mainColor: "black",
     powers: { superspeed: false, canFly: false, usesMagic: false },
     home: "Gotham",
+    height: { meters: 1.93, inches: 76 },
   },
   {
     name: "Firestorm",
@@ -93,6 +102,7 @@ let heroes = [
     mainColor: "red",
     powers: { superspeed: false, canFly: true, usesMagic: false },
     home: "New York City",
+    height: { meters: 1.88, inches: 74 },
   },
   {
     name: "Zatanna",
@@ -100,6 +110,7 @@ let heroes = [
     mainColor: "black",
     powers: { superspeed: false, canFly: false, usesMagic: true },
     home: "New York City",
+    height: { meters: 1.7, inches: 67 },
   },
   {
     name: "Constantine",
@@ -107,42 +118,9 @@ let heroes = [
     mainColor: "grey",
     powers: { superspeed: false, canFly: false, usesMagic: true },
     home: "Northumberland",
+    height: { meters: 1.8, inches: 71 },
   },
 ];
-
-// FUNCTIONS
-function addSectionHeader(sectionName) {
-  let div = document.createElement("div");
-  div.innerHTML = `<h1>${sectionName}</h1>`;
-  root.append(div);
-}
-
-function addInstructions(instruction) {
-  let div = document.createElement("div");
-  div.innerHTML = `<h2>${instruction}</h2>`;
-  root.append(div);
-}
-
-function addData(data) {
-  let div = document.createElement("div");
-  div.innerHTML = `<div>${data}</div>`;
-  root.append(div);
-}
-
-function addHero(array) {
-  let container = document.createElement("div");
-  container.className = "container";
-  for (let i = 0; i < array.length; i++) {
-    let hero = document.createElement("div");
-    hero.innerHTML = `
-    <div class='hero'>
-        <img id='${array[i].name}'/>
-        <div id='heroName'>${array[i].name}</div>
-    </div>`;
-    container.append(hero);
-  }
-  root.append(container);
-}
 
 // ACCESSING DATA IN AN ARRAY OF OBJECTS PRACTICE
 addSectionHeader("ACCESSING DATA IN AN ARRAY OF OBJECTS PRACTICE");
@@ -165,23 +143,61 @@ addData(heroes[1].powers.usesMagic);
 // FILTER METHOD PRACTICE
 addSectionHeader("FILTER METHOD PRACTICE");
 //
-addInstructions("1. Show All Heroes");
+// 1. Show all heroes
+// The answer will render Batman, Superman, Flash, Aquaman, Green_Arrow, Hawkman, Robin, Supergirl, Green_Lantern, Cyborg, Shazaam, Batgirl, Firestorm, Zatanna, Constantine
+addInstructions("1. Show all heroes");
 addHero(heroes);
 
-addInstructions("2. Show Only Batman");
+// 2. Show only Batman
+// The answer will render Batman
+addInstructions("2. Show only Batman");
 addHero(heroes.filter((hero) => hero.name === "Batman"));
 
-addInstructions("3. Show Only Heroes Who are Female");
+// 3. Show heroes who are female
+// The answer will render Supergirl, Batgirl, Zatanna
+addInstructions("3. Show heroes who are female");
 addHero(heroes.filter((hero) => hero.gender === "female"));
 
-addInstructions("4. Show Only Heroes Whose Main Color is Black");
+// 4. Show heroes whose main color is black
+// The answer will render Batman, Batgirl, Zatanna
+addInstructions("4. Show heroes whose main color is black");
 addHero(heroes.filter((hero) => hero.mainColor === "black"));
 
-addInstructions("5. Show Only Heroes Who Can Fly");
+// 5. Show heroes who can fly
+// The answer will render Superman, Hawkman, Green_Lantern, Shazaam, Firestorm
+addInstructions("5. Show heroes who can fly");
 addHero(heroes.filter((hero) => hero.powers.canFly === true));
 
-addInstructions("6. Show Only Heroes Who are Female and Main Color is Black");
+// 6. Show heroes who are female and main color is black
+// The answer will render Batgirl, Zatanna
+addInstructions("6. Show heroes who are female and main color is black");
 addHero(heroes.filter((hero) => hero.gender === "female" && hero.mainColor === "black"));
 
-addInstructions("7. Show Only Heroes Who Can Fly and Main Color is Red");
+// 7. Show heroes who can fly and main color is red
+// The answer will render Shazaam, Firestorm
+addInstructions("7. Show heroes who can fly and main color is red");
 addHero(heroes.filter((hero) => hero.powers.canFly === true && hero.mainColor === "red"));
+
+// 8. Show heroes shorter than 1.80 meters
+// The answer will render Robin, Supergirl, Cyborg, Zatanna
+addInstructions("8. Show heroes shorter than 1.80 meters");
+addHero(heroes.filter((hero) => hero.height.meters < 1.8));
+
+// 9. Show heroes taller than 1.90 meters
+// The answer will render Superman, Aquaman, Shazaam, Batgirl
+addInstructions("9. Show heroes taller than 1.90 meters");
+addHero(heroes.filter((hero) => hero.height.meters > 1.9));
+
+// 10. Show heroes taller than 1.85 meters & shorter than 1.9 meters
+// The answer will render Batman, Green_Lantern, Firestorm
+addInstructions("10. Show heroes taller than 1.85 meters & shorter than 1.9 meters");
+addHero(heroes.filter((hero) => hero.height.meters > 1.85 && hero.height.meters < 1.9));
+
+// 11. Show heroes taller than 1.85m, shorter than 1.9m, and mainColor is NOT black
+// The answer will render Green_Lantern, Firestorm
+addInstructions("11. Show heroes taller than 1.85m, shorter than 1.9m, and mainColor is NOT black");
+addHero(
+  heroes.filter(
+    (hero) => hero.height.meters > 1.85 && hero.height.meters < 1.9 && hero.mainColor != "black"
+  )
+);
