@@ -25,7 +25,7 @@ function addHero(array) {
   container.className = "container";
   for (let i = 0; i < array.length; i++) {
     let hero = document.createElement("div");
-    hero.className = 'hero'
+    hero.className = 'heroImg'
     hero.innerHTML = `
           <img id='${array[i].name}'/>
           <div id='heroName'>${array[i].name}</div>`;
