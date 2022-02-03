@@ -125,20 +125,30 @@ let heroes = [
 // ACCESSING DATA IN AN ARRAY OF OBJECTS PRACTICE
 addSectionHeader("ACCESSING DATA IN AN ARRAY OF OBJECTS PRACTICE");
 //
+// 1. Use the 'heroes' variable to put Batman's name in the below function
+// The answer will render the word 'Batman'
 addInstructions("1. Use the 'heroes' variable to put Batman's name in the below function");
 addData(heroes[0].name);
 
+// 2. Use the 'heroes' variable to put Aquaman's main color in the below function
+// The answer will render the word 'orange'
 addInstructions("2. Use the 'heroes' variable to put Aquaman's main color in the below function");
 addData(heroes[3].mainColor);
 
+// 3. Use the 'heroes' variable to put Aquaman's home in the below function
+// The answer will render the word 'Atlantis'
 addInstructions("3. Use the 'heroes' variable to put Aquaman's home in the below function");
 addData(heroes[3].home);
 
+// 4. Use the 'heroes' variable to put if superman can fly in the below function
+// The answer will render the word 'true'
 addInstructions("4. Use the 'heroes' variable to put if superman can fly in the below function");
 addData(heroes[1].powers.canFly);
 
-addInstructions("5. Use the 'heroes' variable to put if superman uses magic in the below function");
-addData(heroes[1].powers.usesMagic);
+// 5. Use the 'heroes' variable to put if superman uses magic in the below function
+// The answer will render the number '1.91'
+addInstructions("5. Use the 'heroes' variable to put superman's height in meters");
+addData(heroes[1].height.meters);
 
 // FILTER METHOD PRACTICE
 addSectionHeader("FILTER METHOD PRACTICE");
@@ -173,10 +183,10 @@ addHero(heroes.filter((hero) => hero.powers.canFly === true));
 addInstructions("6. Show heroes who are female and main color is black");
 addHero(heroes.filter((hero) => hero.gender === "female" && hero.mainColor === "black"));
 
-// 7. Show heroes who can fly and main color is red
-// The answer will render Shazaam, Firestorm
-addInstructions("7. Show heroes who can fly and main color is red");
-addHero(heroes.filter((hero) => hero.powers.canFly === true && hero.mainColor === "red"));
+// 7. Show heroes who can fly and main color is NOT red
+// The answer will render Superman, Hawkman, Green_Lantern
+addInstructions("7. Show heroes who can fly and main color is NOT red");
+addHero(heroes.filter((hero) => hero.powers.canFly === true && hero.mainColor != "red"));
 
 // 8. Show heroes shorter than 1.80 meters
 // The answer will render Robin, Supergirl, Cyborg, Zatanna
@@ -192,12 +202,3 @@ addHero(heroes.filter((hero) => hero.height.meters > 1.9));
 // The answer will render Batman, Green_Lantern, Firestorm
 addInstructions("10. Show heroes taller than 1.85 meters & shorter than 1.9 meters");
 addHero(heroes.filter((hero) => hero.height.meters > 1.85 && hero.height.meters < 1.9));
-
-// 11. Show heroes taller than 1.85m, shorter than 1.9m, and mainColor is NOT black
-// The answer will render Green_Lantern, Firestorm
-addInstructions("11. Show heroes taller than 1.85m, shorter than 1.9m, and mainColor is NOT black");
-addHero(
-  heroes.filter(
-    (hero) => hero.height.meters > 1.85 && hero.height.meters < 1.9 && hero.mainColor != "black"
-  )
-);
