@@ -1,6 +1,8 @@
 ////////////////////////////
 // DATA ////////////////////
 ////////////////////////////
+
+
 let heroes = [
   {
     name: "Batman",
@@ -62,7 +64,7 @@ let heroes = [
     name: "Supergirl",
     gender: "female",
     mainColor: "blue",
-    powers: { superspeed: false, canFly: false, usesMagic: false },
+    powers: { superspeed: false, canFly: true, usesMagic: false },
     home: "Midvale Orphanage",
     height: { meters: 1.47, inches: 58 },
   },
@@ -142,17 +144,17 @@ addData(heroes[3].mainColor);
 // 3. Use the 'heroes' variable to put Aquaman's home in the below function
 // The answer will render the word 'Atlantis'
 addInstructions("3. Use the 'heroes' variable to put Aquaman's home in the below function");
-// addData();  // <-- uncomment this function & add your code inside the function call
+addData();   // add your code inside the addData function call
 
 // 4. Use the 'heroes' variable to put if superman can fly in the below function
 // The answer will render the word 'true'
 addInstructions("4. Use the 'heroes' variable to put if superman can fly in the below function");
-// addData();  // <-- uncomment this function & add your code inside the function call
+addData();   // add your code inside the addData function call
 
 // 5. Use the 'heroes' variable to put if superman uses magic in the below function
 // The answer will render the number '1.91'
 addInstructions("5. Use the 'heroes' variable to put superman's height in meters");
-// addData();   // <-- uncomment this function & add your code inside the function call
+addData();   // add your code inside the addData function call
 
 ////////////////////////////
 // FILTER METHOD PRACTICE //
@@ -172,39 +174,39 @@ addHero(heroes.filter((hero)=>hero.name === 'Batman'));
 // 3. Show heroes who are female
 // The answer will render Supergirl, Batgirl, Zatanna
 addInstructions("3. Show heroes who are female");
-// addHero();  // <-- uncomment this function & add your code inside the function call
+addHero(heroes.filter(hero => hero.gender === 'female'));  // <-- uncomment this function & add your code inside the function call
 
 // 4. Show heroes whose main color is black
 // The answer will render Batman, Batgirl, Zatanna
 addInstructions("4. Show heroes whose main color is black");
-// addHero();  // <-- uncomment this function & add your code inside the function call
+addHero();  // <-- add your code inside the addHero function call
 
 // 5. Show heroes who can fly
-// The answer will render Superman, Hawkman, Green_Lantern, Shazaam, Firestorm
+// The answer will render Superman, Hawkman, Supergirl, Green_Lantern, Shazaam, Firestorm
 addInstructions("5. Show heroes who can fly");
-// addHero();  // <-- uncomment this function & add your code inside the function call
+addHero();  // <-- add your code inside the addHero function call
 
 // 6. Show heroes who are female and main color is black
 // The answer will render Batgirl, Zatanna
 addInstructions("6. Show heroes who are female and main color is black");
-// addHero();  // <-- uncomment this function & add your code inside the function call
+addHero();  // <-- add your code inside the addHero function call
 
 // 7. Show heroes who can fly and main color is NOT red
-// The answer will render Superman, Hawkman, Green_Lantern
+// The answer will render Superman, Hawkman, Supergirl, Green_Lantern
 addInstructions("7. Show heroes who can fly and main color is NOT red");
-// addHero();  // <-- uncomment this function & add your code inside the function call
+addHero();  // <-- add your code inside the addHero function call
 
 // 8. Show heroes shorter than 1.80 meters
 // The answer will render Robin, Supergirl, Cyborg, Zatanna
 addInstructions("8. Show heroes shorter than 1.80 meters");
-// addHero();  // <-- uncomment this function & add your code inside the function call
+addHero();  // <-- add your code inside the addHero function call
 
 // 9. Show heroes taller than 1.90 meters
 // The answer will render Superman, Aquaman, Shazaam, Batgirl
 addInstructions("9. Show heroes taller than 1.90 meters");
-// addHero();  // <-- uncomment this function & add your code inside the function call
+addHero();  // <-- add your code inside the addHero function call
 
 // 10. Show heroes taller than 1.85 meters & shorter than 1.9 meters
 // The answer will render Batman, Green_Lantern, Firestorm
 addInstructions("10. Show heroes taller than 1.85 meters & shorter than 1.9 meters");
-// addHero();  // <-- uncomment this function & add your code inside the function call
+addHero();  // <-- add your code inside the addHero function call

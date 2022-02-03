@@ -60,7 +60,7 @@ let heroes = [
     name: "Supergirl",
     gender: "female",
     mainColor: "blue",
-    powers: { superspeed: false, canFly: false, usesMagic: false },
+    powers: { superspeed: false, canFly: true, usesMagic: false },
     home: "Midvale Orphanage",
     height: { meters: 1.47, inches: 58 },
   },
@@ -174,7 +174,7 @@ addInstructions("4. Show heroes whose main color is black");
 addHero(heroes.filter((hero) => hero.mainColor === "black"));
 
 // 5. Show heroes who can fly
-// The answer will render Superman, Hawkman, Green_Lantern, Shazaam, Firestorm
+// The answer will render Superman, Hawkman, Supergirl, Green_Lantern, Shazaam, Firestorm
 addInstructions("5. Show heroes who can fly");
 addHero(heroes.filter((hero) => hero.powers.canFly === true));
 
@@ -184,7 +184,7 @@ addInstructions("6. Show heroes who are female and main color is black");
 addHero(heroes.filter((hero) => hero.gender === "female" && hero.mainColor === "black"));
 
 // 7. Show heroes who can fly and main color is NOT red
-// The answer will render Superman, Hawkman, Green_Lantern
+// The answer will render Superman, Hawkman, Supergirl, Green_Lantern
 addInstructions("7. Show heroes who can fly and main color is NOT red");
 addHero(heroes.filter((hero) => hero.powers.canFly === true && hero.mainColor != "red"));
 
