@@ -3,9 +3,9 @@ const root = document.querySelector("#root");
 
 // FUNCTIONS
 function addSectionHeader(sectionName) {
-  let div = document.createElement("div");
-  div.innerHTML = `<h1>${sectionName}</h1>`;
-  root.append(div);
+  let h1 = document.createElement("h1");
+  h1.textContent = sectionName;
+  root.append(h1);
 }
 
 function addInstructions(instruction, answer = "") {
@@ -16,7 +16,7 @@ function addInstructions(instruction, answer = "") {
 
 function addData(data) {
   let div = document.createElement("div");
-  div.innerHTML = `<div>${data}</div>`;
+  div.textContent = data;
   root.append(div);
 }
 
@@ -25,12 +25,13 @@ function addHero(array) {
   container.className = "container";
   for (let i = 0; i < array.length; i++) {
     let hero = document.createElement("div");
+    hero.className = 'hero'
     hero.innerHTML = `
-      <div class='hero'>
           <img id='${array[i].name}'/>
-          <div id='heroName'>${array[i].name}</div>
-      </div>`;
+          <div id='heroName'>${array[i].name}</div>`;
     container.append(hero);
   }
   root.append(container);
 }
+
+
