@@ -2,6 +2,8 @@
 // DATA ////////////////////
 ////////////////////////////
 
+// This 'heroes' data is to set up the assignment
+// you will start writing your code at line 149 of this file
 
 let heroes = [
   {

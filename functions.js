@@ -1,3 +1,6 @@
+// This file is to set up the assignment
+// You will write your code inside code.js
+
 // SELECTORS
 const root = document.querySelector("#root");
 
