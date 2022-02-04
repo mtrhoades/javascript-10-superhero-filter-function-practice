@@ -211,4 +211,4 @@ addHero(heroes.filter((hero => hero.height.meters > 1.9)));  // <-- add your cod
 // 10. Show heroes taller than 1.85 meters & shorter than 1.9 meters
 // The answer will render Batman, Green_Lantern, Firestorm
 addInstructions("10. Show heroes taller than 1.85 meters & shorter than 1.9 meters");
-addHero(heroes.filter((hero) => hero.height.meters > 1.85 && hero.height.meters < 1.9));  // <-- add your code inside the addHero function call
+addHero(heroes.filter((hero) => hero.height.meters > 1.85 && hero.height.meters));  // <-- add your code inside the addHero function call
